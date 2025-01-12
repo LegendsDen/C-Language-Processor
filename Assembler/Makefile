@@ -1,7 +1,7 @@
 # Makefile for assembling, linking, and running a 32-bit NASM program on a 64-bit machine
 
 # Program name (without extension)
-TARGET = setB4
+TARGET = 220101096_set_A8
 
 # NASM assembler and flags
 ASM = nasm
