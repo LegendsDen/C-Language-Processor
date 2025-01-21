@@ -1,5 +1,6 @@
 section .data
-    prompt_doc db "Enter: ", 0xa
+    mes db "Enter (1-->Read  2-->Write   3-->Exit): ", 0xa
+    len equ $-mes
     Cache_Hit db 0xa,"Cache Hit !", 0xa
     len_cache_hit equ $ - Cache_Hit
     Cache_Miss db 0xa,"Cache Miss !", 0xa
@@ -24,11 +25,12 @@ section .text
     global _start
 
 _start:
+alpha:
 ; Print prompt for document
     mov eax, 4
     mov ebx, 1
-    mov ecx, prompt_doc
-    mov edx, 7
+    mov ecx, mes
+    mov edx, len
     int 80h
 
     ; Read document
@@ -47,6 +49,8 @@ _start:
     mov al,[esi]
     cmp al, '1'
     je read
+    cmp al,'3'
+    je exit
     jmp write
     
 
@@ -122,45 +126,6 @@ cache_miss:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    jmp finished
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
 write:
 
     mov eax, 3         
@@ -200,27 +165,22 @@ space:
     inc edi
     xor ebx,ebx
     jmp convrt_loop_again
+
 gajar :
     mov [number+4*edi],ebx
-    
 
+    mov ebx,[number]
+    and ebx,3
+    imul ebx,16
+    xor eax,eax
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    mov eax,arr
+    mov ecx,[number]
+    mov edx, ecx
+    imul edx,4
+    add eax,edx
+    mov edx,[number+4]
+    mov[eax],edx
 
 
 
@@ -228,9 +188,76 @@ gajar :
     
 
 
+    mov eax,cache
+    add eax,ebx
+    cmp [eax],ecx
+    je cache_hits
+
+    cmp dword[eax],99
+    je cache_add
+
+    add eax,8
+    cmp [eax],ecx
+    je cache_hits
+
+    cmp dword [eax],99
+    je cache_add
+
+    jmp fifo
 
 
 
+
+
+fifo:
+    push ecx
+
+    mov ebx,eax
+    mov ecx,[eax]
+    mov[ebx-8],ecx
+    mov ecx,[eax+4]
+    mov[ebx-4],ecx
+
+    pop ecx
+
+    jmp cache_add
+
+
+
+cache_add:
+
+    mov [eax],ecx
+    mov ecx,[number+4]
+    add eax,4
+    mov [eax],ecx
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Cache_Miss
+    mov edx, len_cache_miss
+    int 0x80
+    jmp finished
+
+
+
+
+
+cache_hits:
+    add eax,4
+    mov edx,[number+4]
+    mov[eax],edx
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Cache_Hit
+    mov edx, len_cache_hit
+    int 0x80
+    jmp finished
+
+
+
+
+    
 
 
 finished:
@@ -243,7 +270,7 @@ finished:
 print_arr:
     inc ecx
     cmp ecx,17
-    je exit
+    je final
     jmp convert_number
 
 convert_number: 
@@ -281,7 +308,13 @@ convert_loop:
     add ebx,4
     jmp print_arr
 
+final:
+    jmp alpha
+
+
+
 exit:
+
     mov eax,1
     xor ebx,ebx
     int 80h
