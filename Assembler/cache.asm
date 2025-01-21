@@ -1,14 +1,32 @@
+;Sushant Kumar
+
+
 section .data
-    mes db "Enter (1-->Read  2-->Write   3-->Exit): ", 0xa
+    mes db "Enter (1-->Read  2-->Write   3-->Exit): "
     len equ $-mes
     Cache_Hit db 0xa,"Cache Hit !", 0xa
+
     len_cache_hit equ $ - Cache_Hit
+    Cache  db "Set 1(top row), Set 4(bottom row) ", 0xa
+    len1 equ $-Cache
+    Desc db "Each Row has 2 block ,with each block storing address and corresponding value at that memory address ",0xa
+    len2 equ $-Desc
+    Address db "Address is in form of index of an array arr of size 100, so address can be from (0 to 99)",0xa
+    len3 equ $-Address
+    Empty db "100 in cache indicates empty block",0xa
+    len4 equ $-Empty 
+    Read db "Enter address(0-99) to read: "
+    len5 equ $-Read
+    Write db "Enter address(0-99) and value to write: "
+    len6 equ $-Write
+    Debug db "debug",0xa
+    len7 equ $-Debug
     Cache_Miss db 0xa,"Cache Miss !", 0xa
     len_cache_miss equ $ - Cache_Miss
-    newline db 0xa
+    newline db " " 0xa
     ten dd 10
-    arr dd 50 dup(0)
-    cache dd 16 dup(99)
+    arr dd 100 dup(0)
+    cache dd 16 dup(100)
 
 
 
@@ -25,6 +43,35 @@ section .text
     global _start
 
 _start:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Cache
+    mov edx, len1
+    int 80h
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Desc
+    mov edx, len2
+    int 80h
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Address
+    mov edx, len3
+    int 80h
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Empty
+    mov edx, len4
+    int 80h
+
+
+
+
+
+
 alpha:
 ; Print prompt for document
     mov eax, 4
@@ -57,7 +104,14 @@ alpha:
     
 
 read:
-     ; Read input
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Read
+    mov edx, len5
+    int 80h
+
+; Read input
     mov eax, 3         
     mov ebx, 0         
     mov ecx, address 
@@ -89,7 +143,7 @@ convrt_loop:
 halwa:
     mov [number],ebx
     and ebx,3
-    imul ebx,4
+    imul ebx,16
     xor eax,eax
     
     mov eax,cache
@@ -127,6 +181,11 @@ cache_miss:
 
 
 write:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, Write
+    mov edx, len6
+    int 80h
 
     mov eax, 3         
     mov ebx, 0         
@@ -193,14 +252,14 @@ gajar :
     cmp [eax],ecx
     je cache_hits
 
-    cmp dword[eax],99
+    cmp dword[eax],100
     je cache_add
 
     add eax,8
     cmp [eax],ecx
     je cache_hits
 
-    cmp dword [eax],99
+    cmp dword [eax],100
     je cache_add
 
     jmp fifo
@@ -256,10 +315,6 @@ cache_hits:
 
 
 
-
-    
-
-
 finished:
     xor ebx, ebx       
     xor eax,eax
@@ -277,8 +332,10 @@ convert_number:
     mov eax ,[ebx]
     mov edi, iterations
     add edi, 7
-    
-    mov byte [edi], 0xa
+    test ecx,3
+    jz is_divisible_by4
+    mov byte [edi], 0x20
+now:
     dec edi
     mov esi,10
 
@@ -321,3 +378,6 @@ exit:
 
 
 
+is_divisible_by4:
+    mov byte [edi], 0xa
+    jmp now
