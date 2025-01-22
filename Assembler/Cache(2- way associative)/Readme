@@ -1,0 +1,47 @@
+-->To run cache.asm, 
+    just change file name in TARGET in Makefile , and do 
+    make command in linux 
+-->Next to run final program ,just do ./<filename> (eg ./cache)
+
+
+
+Assumption-->
+
+Here i have assumed i have an array of size 100 , so address (0-99) ,
+User can enter any address lying in this range ,so here i have index of array as address 
+
+
+
+
+
+
+Cache Structure -->
+
+Cache has 4 set , with each set having 2 block 
+Each block of cache has 2 entries ,(address, and value at that address )
+So ,Here Cache works in following way 
+On entering address, we mod it by 4 ---> to find in which set it will go
+     Eg--> ADDRESS 0 will go to set 0,ADDRESS 1 will go to set 1,ADDRESS 2 will go to 2,
+     ADDRESS 3 will go to 3,ADDRESS 4 will go to 0,ADDRESS 5 will go to 1,ADDRESS 6 will go to 2, ans so on.
+
+ each set has 2 blocks , so first it will check if first block of its set is empty , if yes than it will added 
+                    else , it will check 2nd block of same set , if that is empty , it will be inserted ,
+                    else ,Now , FIFO will happen ,(I place earliest address, in 1st block of set) ,
+                    so 2nd block element will move to first , and this current will move to 2nd block
+
+
+
+
+
+
+
+Three Operation -->
+
+1. Read---> User will enter address , and it will check if that address is in cache or not , if yes , it will print Cache Hit
+            else , it will print "Cache Miss" and user can continue to interact with cache 
+
+2.Write---> User will enter address and value , and it will check if that address is in cache or not , if yes , it will print Cache Hit
+            else , it will print "Cache Miss" and FIFO will happen removing earliest address and inserting current one and  user can continue to interact with cache
+        Here in case of Cache Hit , value  at that address will also be updated to current given value 
+
+3.Exit---> User can exit the program 
