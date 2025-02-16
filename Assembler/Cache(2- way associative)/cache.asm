@@ -306,7 +306,7 @@ cache_hits:
     mov edx,[number+4]
     mov[eax],edx
 
-    mov eax, 4
+    mov eax, 4 
     mov ebx, 1
     mov ecx, Cache_Hit
     mov edx, len_cache_hit
