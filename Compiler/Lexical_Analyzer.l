@@ -48,8 +48,9 @@ IDENTIFIER              [a-zA-Z_][a-zA-Z0-9_]*
 DIGIT                   [0-9]
 DIGIT_SEQ               [0-9]+
 NONZERO_DIGIT          [1-9]
+Zero                    "0"
 SIGN                    "+"|"-"
-INT_CONSTANT           {SIGN}?{NONZERO_DIGIT}{DIGIT}*|"0"
+INT_CONSTANT           {SIGN}?{Zero}*?{NONZERO_DIGIT}{DIGIT}*|"0"
 
 ESCAPE_SEQ             "\\\'"|"\\\""|"\\?"|"\\\\"|"\\a"|"\\b"|"\\f"|"\\n"|"\\r"|"\\t"|"\\v"
 C_CHAR                 [^\'\n\\]|{ESCAPE_SEQ}

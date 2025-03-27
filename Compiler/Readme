@@ -3,7 +3,7 @@
 ## Description
 This is a **Lexical Analyzer** for **nanoC**, implemented using **Flex**.  
 It scans an input `nanoC` source file (`.nc`) and generates:
-1. `tokens.txt` - List of all tokens identified.
+1. `output.txt` - contain each line grammar reduction
 2. `symbol_table.txt` - List of identifiers, keywords, and literals.
 
 ## Installation & Running
@@ -11,9 +11,7 @@ It scans an input `nanoC` source file (`.nc`) and generates:
 ### 1️⃣ Compile the Lexical Analyzer
 open linux terminal from same directory where code is present ,No enter following line of commands to execute 
 
-make
-./Lexical_Analyzer <input_file>
+to run ---->
+make   (in terminal)
 
-eg:-
-make
-./Lexical_Analyzer test.nc
+

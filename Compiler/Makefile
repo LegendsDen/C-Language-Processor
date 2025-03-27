@@ -1,23 +1,31 @@
-CC = gcc
-LEX = lex
+# Makefile variables
 RM = rm -f
+MAIN = A7_220101096
+CC = gcc
 
-TARGET_LEX = a.l
-LEX_C = lex.yy.c
-MAIN = halwa.c
+$(MAIN)_output.txt: a.out $(MAIN).nc
+	./a.out < $(MAIN).nc > output.txt
 
-EXEC = a.out
-TEST = test.nc
-OUTPUT = output.txt
+a.out: lex.yy.o $(MAIN).tab.o $(MAIN).o
+	$(CC) lex.yy.o $(MAIN).tab.o $(MAIN).o
 
-$(EXEC): $(LEX_C)
-	$(CC) $(LEX_C) $(MAIN)
+$(MAIN).tab.c: $(MAIN).y
+	bison -dty $(MAIN).y 
 
-$(LEX_C): $(TARGET_LEX)
-	$(LEX) $(TARGET_LEX)
+lex.yy.c: $(MAIN).l $(MAIN).tab.h 
+	flex $(MAIN).l
+
+$(MAIN).tab.h: $(MAIN).y
+	bison -d $(MAIN).y 
+
+$(MAIN).o:
+	$(CC) -c $(MAIN).c
+
+lex.yy.o: lex.yy.c
+	$(CC) -c lex.yy.c
+
+$(MAIN).tab.o: $(MAIN).tab.c
+	$(CC) -c $(MAIN).tab.c
 
 clean:
-	$(RM) $(LEX_C) $(EXEC) $(OUTPUT)
-
-run: $(EXEC)
-	./$(EXEC) $(TEST) && ./$(EXEC) $(TEST) > $(OUTPUT)
+	$(RM) a.out lex.yy.* *.o *.tab.* *.output

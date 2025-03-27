@@ -1,23 +1,16 @@
+-----------------------------------
 SYMBOL TABLE
 ----------------
-void : KEYWORD
-print : IDENTIFIER
-int : KEYWORD
-x : IDENTIFIER
-printf : IDENTIFIER
-"%d" : STRING LITERAL
-main : IDENTIFIER
-0 : INTEGER CONSTANT
-y : IDENTIFIER
-3 : INTEGER CONSTANT
-z_123 : IDENTIFIER
-char : KEYWORD
-ch : IDENTIFIER
-'h' : CHAR CONSTANT
-abc : IDENTIFIER
-"dn" : STRING LITERAL
-if : KEYWORD
-10 : INTEGER CONSTANT
-5 : INTEGER CONSTANT
-else : KEYWORD
-return : KEYWORD
+square               : IDENTIFIER
+x                    : IDENTIFIER
+sum_array            : IDENTIFIER
+arr                  : IDENTIFIER
+sum                  : IDENTIFIER
+0                    : INTEGER CONSTANT
+i                    : IDENTIFIER
+5                    : INTEGER CONSTANT
+1                    : INTEGER CONSTANT
+main                 : IDENTIFIER
+y                    : IDENTIFIER
+a                    : IDENTIFIER
+-----------------------------------
