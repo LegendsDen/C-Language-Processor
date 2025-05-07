@@ -186,7 +186,7 @@ cs348-c-language-processor/
 
 ## 👨‍💻 Author
 
-[Sushant Kumar] 
+Sushant Kumar  
 Course: CS348 – Implementation of Programming Languages  
-Institution: [IIT Guwahati]  
+Institution: IIT Guwahati  
 Year: 2024
