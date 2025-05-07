@@ -146,7 +146,7 @@ Sample output includes generated quads with labels and translated C logic.
 
 ## 👨‍💻 Author
 
-Sushant Kumar 
-Course: CS348 – Implementation of Programming Languages  
-Institution: IIT Guwahati
-Year: 2025
+- Sushant Kumar 
+- Course: CS348 – Implementation of Programming Languages  
+- Institution: IIT Guwahati
+- Year: 2025
