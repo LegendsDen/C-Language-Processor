@@ -2,6 +2,25 @@
 
 This repository contains eight modular assignments from **CS348: Implementation of Programming Languages**, where I progressively built a simplified C-like language processor from scratch. The project covers everything from writing assembly code to building a full lexer, parser, and a machine-independent code generator for a subset of C called **microC**.
 
+## 🧭 Table of Contents
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [How to Run](#how-to-run)
+- [Project Modules](#project-modules)
+  - [Assembly Programming Tasks](#assembly-programming-tasks)
+  - [Simulated Cache in NASM](#simulated-cache-in-nasm)
+  - [Two-Pass Assembler in C](#two-pass-assembler-in-c)
+  - [Lexer for nanoC](#lexer-for-nanoc)
+  - [Lexer for microC](#lexer-for-microc)
+  - [Parser for microC](#parser-for-microc)
+  - [Calculator with Lexer & Parser](#calculator-with-lexer--parser)
+  - [Machine-Independent Code Generation](#machine-independent-code-generation)
+- [Author](#author)
+
+## 📖 Overview
+
+This project represents a comprehensive implementation of language processing components, starting with foundational assembly programming and progressing through increasingly complex tasks, culminating in a full compiler implementation for microC. Each module builds upon knowledge from previous assignments, creating a complete understanding of language processor implementation.
+
 ## 📁 Project Structure
 
 ```
@@ -37,88 +56,75 @@ cs348-c-language-processor/
 
    For parser/codegen assignments, ensure flex and bison are installed.
 
-## 📦 Assignments
+## 📦 Project Modules
 
-<details>
-<summary><b>🧮 Assignment 1 – Assembly Programming Tasks</b></summary>
+### 🧮 Assignment 1 – Assembly Programming Tasks
 
-### Language: NASM (x86)
+**Language**: NASM (x86)
 
-#### Tasks implemented:
+**Tasks implemented**:
 - Print all non-leap years in a user-defined range.
 - Count alphabets, digits, and special symbols in a document.
 - Replace each character in a string with its next ASCII character using rollover logic.
-</details>
 
-<details>
-<summary><b>🧠 Assignment 2 – Simulated Cache in NASM</b></summary>
+### 🧠 Assignment 2 – Simulated Cache in NASM
 
-### Goal: Implement a 2-way set associative cache in NASM.
+**Goal**: Implement a 2-way set associative cache in NASM.
 
-#### Features:
+**Features**:
 - 4 sets × 2 blocks/set.
 - FIFO replacement on write misses.
 - Simulates cache hits and misses based on memory address input.
-</details>
 
-<details>
-<summary><b>🛠️ Assignment 3 – Two-Pass Assembler in C</b></summary>
+### 🛠️ Assignment 3 – Two-Pass Assembler in C
 
-### Language: C
+**Language**: C
 
 Implements a two-pass assembler for a simplified instruction set:
 - Pass 1: Symbol Table and label resolution.
 - Pass 2: Object code generation.
 
 Optional: One-pass assembler for bonus.
-</details>
 
-<details>
-<summary><b>🔤 Assignment 4 – Lexer for nanoC (Flex)</b></summary>
+### 🔤 Assignment 4 – Lexer for nanoC (Flex)
 
-### Language: nanoC (stripped-down C99)
+**Language**: nanoC (stripped-down C99)
 
 Built with Flex
 
-#### Outputs:
+**Outputs**:
 - Token stream file.
 - Symbol/Literal table
 
 Includes a Makefile and test programs like factorial, array max, Fibonacci.
-</details>
 
-<details>
-<summary><b>📘 Assignment 5 – Lexer for microC (Flex)</b></summary>
+### 📘 Assignment 5 – Lexer for microC (Flex)
 
 A more expressive lexer for microC, supporting:
 - Floating points
 - Binary/Hex constants
 - All major token categories: identifiers, constants, punctuators
 
-#### Two implementations:
+**Two implementations**:
 - Iterative
 - Non-iterative
 
 Outputs token classification and symbol table.
-</details>
 
-<details>
-<summary><b>📐 Assignment 6 – Parser for microC (Bison)</b></summary>
+### 📐 Assignment 6 – Parser for microC (Bison)
 
-### Grammar includes:
+**Grammar includes**:
 - Expressions (arithmetic, logical, conditional)
 - Declarations and compound blocks
 - Conditionals, loops (for), and returns
 
-#### Outputs:
+**Outputs**:
 - Symbol Table
 - Grammar reduction trace
 
 Integrates with lexer from Assignment 5.
-</details>
 
-<details>
-<summary><b>🧾 Assignment 7 – Calculator with Lexer & Parser</b></summary>
+### 🧾 Assignment 7 – Calculator with Lexer & Parser
 
 Supports custom expressions:
 - expr(...), bintodec(...), bintohex(...), hextobin(...), hextodec(...)
@@ -126,10 +132,8 @@ Supports custom expressions:
 Fully functional interpreter using Lex + Bison.
 
 Implements grammar and evaluation logic for arithmetic and conversion expressions.
-</details>
 
-<details>
-<summary><b>⚙️ Assignment 8 – Machine-Independent Code Generation</b></summary>
+### ⚙️ Assignment 8 – Machine-Independent Code Generation
 
 Extends microC parser to generate 3-Address Code (TAC):
 - Quad array with fields: op, arg1, arg2, result
@@ -139,7 +143,6 @@ Manages symbol tables for:
 - Functions and local scopes
 
 Sample output includes generated quads with labels and translated C logic.
-</details>
 
 ## 👨‍💻 Author
 
