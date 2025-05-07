@@ -1,4 +1,4 @@
-# 🔧 CS348 C Language Processor Project
+# 🚀 CS348 C Language Processor Project
 
 This repository contains eight modular assignments from **CS348: Implementation of Programming Languages**, where I progressively built a simplified C-like language processor from scratch. The project covers everything from writing assembly code to building a full lexer, parser, and a machine-independent code generator for a subset of C called **microC**.
 
