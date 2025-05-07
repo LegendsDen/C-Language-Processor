@@ -60,93 +60,133 @@ cs348-c-language-processor/
 
 ### 🧮 Assignment 1 – Assembly Programming Tasks
 
-**Language**: NASM (x86)
+**Language**: NASM (x86 Assembly)
 
 **Tasks implemented**:
-- Print all non-leap years in a user-defined range.
-- Count alphabets, digits, and special symbols in a document.
-- Replace each character in a string with its next ASCII character using rollover logic.
+- **Leap Year Filter**: Print all non-leap years in a user-defined range.
+- **Character Categorization**: Count and classify characters from a document into alphabets, digits, and special characters.
+- **ASCII Shift**: Rotate each alphabet in a string to its next ASCII character (with wrap-around logic).
+
+**Focus**: Logical implementation of control structures and string/character handling in assembly.
 
 ### 🧠 Assignment 2 – Simulated Cache in NASM
 
 **Goal**: Implement a 2-way set associative cache in NASM.
 
 **Features**:
-- 4 sets × 2 blocks/set.
+- 4 sets × 2 blocks/set with cache lookup and write logic handled using memory segments.
 - FIFO replacement on write misses.
-- Simulates cache hits and misses based on memory address input.
+- Cache hit/miss detection.
+
+**Output includes**:
+- Status of read/write operations.
+- Updated state of the cache.
 
 ### 🛠️ Assignment 3 – Two-Pass Assembler in C
 
 **Language**: C
 
-Implements a two-pass assembler for a simplified instruction set:
-- Pass 1: Symbol Table and label resolution.
-- Pass 2: Object code generation.
+**Implementation**:
+- Created a full assembler that processes simplified assembly code in two passes:
+  - **Pass 1**: Build symbol table, resolve labels and addresses.
+  - **Pass 2**: Generate object code using intermediate representation.
+- Supported instructions like MOV, ADD, SUB, JMP, LDA, STA, CALL, RET, etc.
+- Optional one-pass assembler attempted for bonus.
 
-Optional: One-pass assembler for bonus.
+**I/O**:
+- Input: Assembly file
+- Output: Object file + intermediate info
 
 ### 🔤 Assignment 4 – Lexer for nanoC (Flex)
 
-**Language**: nanoC (stripped-down C99)
+**Language**: nanoC (stripped-down C99 with int, char, void types only)
 
-Built with Flex
+**Implementation**:
+- Built with Flex
+- Tokenized identifiers, numbers, punctuators, operators, and keywords.
+- Supported single-line and multi-line comments.
 
 **Outputs**:
 - Token stream file.
 - Symbol/Literal table
 
-Includes a Makefile and test programs like factorial, array max, Fibonacci.
+**Delivered with**: test.nc input file, Makefile, and token classification logic.
 
 ### 📘 Assignment 5 – Lexer for microC (Flex)
 
-A more expressive lexer for microC, supporting:
-- Floating points
+**Language**: microC - a slightly more expressive subset of C
+
+**Features**:
+- Supports floating points, booleans, and additional operators
 - Binary/Hex constants
 - All major token categories: identifiers, constants, punctuators
 
 **Two implementations**:
-- Iterative
-- Non-iterative
+- **Iterative Lexer**: Uses yylex() loop and token switch cases.
+- **Non-Iterative Lexer**: Token classification using inline print logic.
 
-Outputs token classification and symbol table.
+**Outputs**:
+- List of tokens with types
+- Symbol table of identifiers and constants
 
 ### 📐 Assignment 6 – Parser for microC (Bison)
+
+**Implementation**:
+- Created a full grammar parser for microC using Bison
+- Covered expressions, loops, conditionals, return statements, and nested scopes.
+- Replaced {} blocks with begin/end as per microC syntax.
 
 **Grammar includes**:
 - Expressions (arithmetic, logical, conditional)
 - Declarations and compound blocks
 - Conditionals, loops (for), and returns
 
-**Outputs**:
-- Symbol Table
-- Grammar reduction trace
+**Features**:
+- Prints grammar reductions
+- Builds a symbol table during parsing
 
-Integrates with lexer from Assignment 5.
+**I/O**:
+- Input: .mc file
+- Output: Rule-by-rule trace and symbol mapping
 
 ### 🧾 Assignment 7 – Calculator with Lexer & Parser
 
-Supports custom expressions:
-- expr(...), bintodec(...), bintohex(...), hextobin(...), hextodec(...)
+**Implementation**:
+- Built a multi-functional calculator using Lex + Bison
 
-Fully functional interpreter using Lex + Bison.
+**Supports custom expressions**:
+- **Arithmetic Expressions**: expr(3+5*2-4**2/2) → 5
+- **Binary to Decimal**: bintodec(1101) → 13
+- **Binary to Hex**: bintohex(10101001) → A9
+- **Hex to Binary**: hextobin(2F) → 00101111
+- **Hex to Decimal**: hextodec(FF) → 255
 
-Implements grammar and evaluation logic for arithmetic and conversion expressions.
+**Features**:
+- Tokenized function names, operators, and numbers.
+- Evaluated conversions via parsing logic and printing results.
 
 ### ⚙️ Assignment 8 – Machine-Independent Code Generation
 
-Extends microC parser to generate 3-Address Code (TAC):
-- Quad array with fields: op, arg1, arg2, result
+**Goal**: Translate microC to 3-address code (TAC)
 
-Manages symbol tables for:
-- Variables, arrays, pointers
-- Functions and local scopes
+**Implementation**:
+- Implemented semantic actions in Bison grammar:
+  - Generate quad array entries: op, arg1, arg2, result
+  - Maintain symbol tables with scope handling
 
-Sample output includes generated quads with labels and translated C logic.
+**Code supports**:
+- All standard expressions, function calls, and basic control flow
+- Generation of temporaries, labels, backpatching
+
+**Tools**:
+- emit(), gentemp(), makelist(), backpatch() utilities
+- Separate symbol tables for global/function/local scopes
+
+**Output**: Generated quads with labels and translated C logic
 
 ## 👨‍💻 Author
 
 - Sushant Kumar 
 - Course: CS348 – Implementation of Programming Languages  
 - Institution: IIT Guwahati
-- Year: 2025
+- Year: 2024–2025
