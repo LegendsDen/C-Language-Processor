@@ -58,7 +58,7 @@ cs348-c-language-processor/
 
 ## 📦 Project Modules
 
-### 🧮 Assignment 1 – Assembly Programming Tasks
+### 🧮 **Assignment 1 – Assembly Programming Tasks**
 
 **Language**: NASM (x86 Assembly)
 
@@ -69,7 +69,7 @@ cs348-c-language-processor/
 
 **Focus**: Logical implementation of control structures and string/character handling in assembly.
 
-### 🧠 Assignment 2 – Simulated Cache in NASM
+### 🧠 **Assignment 2 – Simulated Cache in NASM**
 
 **Goal**: Implement a 2-way set associative cache in NASM.
 
@@ -82,7 +82,7 @@ cs348-c-language-processor/
 - Status of read/write operations.
 - Updated state of the cache.
 
-### 🛠️ Assignment 3 – Two-Pass Assembler in C
+### 🛠️ **Assignment 3 – Two-Pass Assembler in C**
 
 **Language**: C
 
@@ -97,7 +97,7 @@ cs348-c-language-processor/
 - Input: Assembly file
 - Output: Object file + intermediate info
 
-### 🔤 Assignment 4 – Lexer for nanoC (Flex)
+### 🔤 **Assignment 4 – Lexer for nanoC (Flex)**
 
 **Language**: nanoC (stripped-down C99 with int, char, void types only)
 
@@ -112,7 +112,7 @@ cs348-c-language-processor/
 
 **Delivered with**: test.nc input file, Makefile, and token classification logic.
 
-### 📘 Assignment 5 – Lexer for microC (Flex)
+### 📘 **Assignment 5 – Lexer for microC (Flex)**
 
 **Language**: microC - a slightly more expressive subset of C
 
@@ -129,7 +129,7 @@ cs348-c-language-processor/
 - List of tokens with types
 - Symbol table of identifiers and constants
 
-### 📐 Assignment 6 – Parser for microC (Bison)
+### 📐 **Assignment 6 – Parser for microC (Bison)**
 
 **Implementation**:
 - Created a full grammar parser for microC using Bison
@@ -149,7 +149,7 @@ cs348-c-language-processor/
 - Input: .mc file
 - Output: Rule-by-rule trace and symbol mapping
 
-### 🧾 Assignment 7 – Calculator with Lexer & Parser
+### 🧾 **Assignment 7 – Calculator with Lexer & Parser**
 
 **Implementation**:
 - Built a multi-functional calculator using Lex + Bison
@@ -165,7 +165,7 @@ cs348-c-language-processor/
 - Tokenized function names, operators, and numbers.
 - Evaluated conversions via parsing logic and printing results.
 
-### ⚙️ Assignment 8 – Machine-Independent Code Generation
+### ⚙️ **Assignment 8 – Machine-Independent Code Generation**
 
 **Goal**: Translate microC to 3-address code (TAC)
 
@@ -186,7 +186,7 @@ cs348-c-language-processor/
 
 ## 👨‍💻 Author
 
-- Sushant Kumar 
-- Course: CS348 – Implementation of Programming Languages  
-- Institution: IIT Guwahati
-- Year: 2024–2025
+[Sushant Kumar] 
+Course: CS348 – Implementation of Programming Languages  
+Institution: [IIT Guwahati]  
+Year: 2024
