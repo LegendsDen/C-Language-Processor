@@ -1,0 +1,24 @@
+-----------------------------------
+SYMBOL TABLE
+----------------
+main                 : IDENTIFIER
+a                    : IDENTIFIER
+10                   : INTEGER CONSTANT
+b                    : IDENTIFIER
+2.5e3                : FLOATING CONSTANT
+c                    : IDENTIFIER
+-1.23E-2             : FLOATING CONSTANT
+ch                   : IDENTIFIER
+'A'                  : CHARACTER_CONSTANT
+str                  : IDENTIFIER
+"Hello, World!"      : STRING LITERAL
+5                    : INTEGER CONSTANT
+1                    : INTEGER CONSTANT
+i                    : IDENTIFIER
+0                    : INTEGER CONSTANT
+2                    : INTEGER CONSTANT
+result               : IDENTIFIER
+z                    : IDENTIFIER
+y                    : IDENTIFIER
+x                    : IDENTIFIER
+-----------------------------------

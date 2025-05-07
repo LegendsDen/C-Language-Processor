@@ -1,0 +1,542 @@
+-------------------- Parsing --------------------
+
+type: integer
+identifier to direct_declarator.
+function declaration.
+
+-------- Parsing Line No. 2 --------
+pointer_opt direct_declarator to declarator.
+
+-------- Parsing Line No. 3 --------
+type: integer
+identifier to direct_declarator.
+pointer_opt direct_declarator to declarator.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list.
+
+-------- Parsing Line No. 4 --------
+type: float
+identifier to direct_declarator.
+pointer_opt direct_declarator to declarator.
+FLOAT_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list extension.
+
+-------- Parsing Line No. 5 --------
+type: float
+identifier to direct_declarator.
+pointer_opt direct_declarator to declarator.
+FLOAT_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list extension.
+
+-------- Parsing Line No. 6 --------
+type: char
+identifier to direct_declarator.
+pointer_opt direct_declarator to declarator.
+CHARACTER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list extension.
+
+-------- Parsing Line No. 7 --------
+type: char
+identifier to direct_declarator.
+Array declaration without size.
+pointer_opt direct_declarator to declarator.
+STRING LITERAL to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list extension.
+
+-------- Parsing Line No. 8 --------
+
+-------- Parsing Line No. 9 --------
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+relational_expression > additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+additive_expression + multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+unary_expression = assignment_expression to assignment_expression.
+assignment_expression to expression.
+expression opt statement.
+expression_statement.
+
+-------- Parsing Line No. 10 --------
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+additive_expression - multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+unary_expression = assignment_expression to assignment_expression.
+assignment_expression to expression.
+expression opt statement.
+expression_statement.
+if else statement.
+selection_statement.
+block item statement.
+block list extension.
+
+-------- Parsing Line No. 11 --------
+
+-------- Parsing Line No. 12 --------
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+unary_expression = assignment_expression to assignment_expression.
+assignment_expression to expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+relational_expression < additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+Post-increment (x++) detected.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+
+-------- Parsing Line No. 13 --------
+
+-------- Parsing Line No. 14 --------
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+multiplicative_expression / unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+unary_expression = assignment_expression to assignment_expression.
+assignment_expression to expression.
+expression opt statement.
+expression_statement.
+block item statement.
+block list.
+
+-------- Parsing Line No. 15 --------
+compound statement declaration.
+compound_statement.
+for loop.
+iteration_statement.
+block item statement.
+block list extension.
+
+-------- Parsing Line No. 16 --------
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to shift_expression.
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+Left shift (<<) detected.
+shift_expression to assignment_expression.
+unary_expression = assignment_expression to assignment_expression.
+assignment_expression to expression.
+expression opt statement.
+expression_statement.
+block item statement.
+block list extension.
+
+-------- Parsing Line No. 17 --------
+type: integer
+identifier to direct_declarator.
+pointer_opt direct_declarator to declarator.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+Pre-increment (++x) detected.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list extension.
+
+-------- Parsing Line No. 18 --------
+
+-------- Parsing Line No. 19 --------
+type: integer
+identifier to direct_declarator.
+pointer_opt direct_declarator to declarator.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+and_expression & equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+(expression) to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+xor_expression ^ or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+(expression) to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+multiplicative_expression * unary_expression to multiplicative expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+(expression) to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+multiplicative_expression modulo unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+(expression) to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+multiplicative_expression / unary_expression to multiplicative_expression.
+additive_expression + multiplicative_expression to additive_expression.
+IDENTIFIER to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+Pre-decrement (--x) detected.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+(expression) to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+additive_expression - multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+or_expression | and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to initializer.
+assignment.
+type_specifier init_declarator ; to declaration.
+block item declaration.
+block list extension.
+
+-------- Parsing Line No. 20 --------
+INTEGER_CONSTANT to primary_expression.
+primary_expression to postfix_expression.
+postfix_expression to unary_expression.
+unary_expression to multiplicative_expression.
+multiplicative_expression to additive_expression.
+additive_expression to relational_expression.
+relational_expression to equality_expression.
+equality_expression to and_expression.
+and_expression to or_expression.
+or_expression to xor_expression.
+xor_expression to logical_AND_expression.
+logical_AND_expression to logical_OR_expression.
+logical_OR_expression to conditional_expression.
+conditional_expression to assignment_expression.
+assignment_expression to expression.
+return statement.
+jump_statement.
+block item statement.
+block list extension.
+
+-------- Parsing Line No. 21 --------
+compound statement declaration.
+type specifier declarator.
+function definition.
+first tr_unit -> units.
+
+-------- Parsing Line No. 22 --------
+
+Symbol table has been written to symbol_table.txt

@@ -1,0 +1,16 @@
+To run the program -->
+
+make
+./220101096
+
+
+Here number is defined to exclude any number of form -4 or +110  type 
+so any expr(1*-2)--> here ideally we are multiplying 1 with -2  , but in our case it would give syntax error
+
+Also i have defined type of expression ,term, factor as double so expr(10/3)  would give result 3.333333
+
+
+Here invalid binary digit or hexadecimal is also handled , for eg --> 
+    bintodec(45)   -->Invalid Binary digit
+
+    

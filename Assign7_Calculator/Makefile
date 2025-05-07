@@ -1,0 +1,11 @@
+220101096: 220101096.tab.c lex.yy.c
+	gcc -o 220101096 220101096.tab.c lex.yy.c -lm
+
+220101096.tab.c 220101096.tab.h: 220101096.y
+	bison -d 220101096.y
+
+lex.yy.c: 220101096.l 220101096.tab.h
+	flex 220101096.l
+
+clean:
+	rm -f 220101096 220101096.tab.c 220101096.tab.h lex.yy.c

@@ -1,0 +1,11 @@
+To Run ----->
+enter make to compile 
+enter make test to run the test case in input_test.mc
+
+output will come in 220101096quads.out 
+
+Notes--->
+For loop iteration,
+mine code support WHILE
+doesnt suport FOR 
+doesnt support i++ operator , instead uses i+=1  operator
